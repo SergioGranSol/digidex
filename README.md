@@ -15,6 +15,8 @@ This is a simple plain page to show sprites collected from many artists, triyng 
 
 * **Name** - *Artits* - Page
 * **Name** - *Artits* - Page
+* **Name** - *Artits* - Page
+* **Name** - *Artits* - Page
 
 ## License
 
