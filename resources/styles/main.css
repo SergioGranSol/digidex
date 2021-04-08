@@ -1,0 +1,98 @@
+/* UTILS */
+.-fs-sm {
+  font-size: small !important;
+}
+
+.-fs-x-sm {
+  font-size: x-small !important;
+}
+
+.-fs-xx-sm {
+  font-size: xx-small !important;
+}
+
+.-pb-9 {
+  padding-bottom: 9rem !important;
+}
+
+/* MAIN */
+.-bg {
+  background: url(../img/bg.png),
+    linear-gradient(#8e9eab, #8e9eab);
+}
+
+.-nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.-nav-masthead .nav-link:hover,
+.-nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.-nav-masthead .nav-link+.nav-link {
+  margin-left: 1rem;
+}
+
+.-nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.-border-radius {
+  border-radius: .65rem .15rem;
+}
+
+.-bg-details-container {
+  background: url("../img/bg.png"),
+    linear-gradient(#6fb1fc, #4364f7, #0052d4);
+}
+
+.-menu {
+  clip-path: polygon(0% 15%, 80% 15%, 85% 0, 100% 0, 100% 15%, 100% 100%, 0 100%);
+  margin-bottom: -1px;
+}
+
+.-digimon-detail-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.-evolution-header {
+  z-index: 100;
+  position: relative;
+  margin-bottom: -10px;
+  margin-left: 10px;
+}
+
+.-evolutions-container {
+  background-color: #c4c4dc;
+}
+
+.-details {
+  border-radius: 40px 40px 0 0;
+}
+
+.-digimon-evolutions-img {
+  max-width: calc(100% - 20px);
+  max-height: calc(100% - 20px);
+  margin: auto;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.-digimon-img {
+  vertical-align: bottom;
+  cursor: pointer;
+  margin: 1px;
+}
+
+.-load {
+  background: #4c4c67ba;
+  z-index: 1000;
+}
