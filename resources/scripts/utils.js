@@ -19,12 +19,14 @@ const getDigiEvolutions = (digimonName, level) => {
             if(digimon.evol.includes(thisDigimon.img) && (
                 thisDigimon.lv == digimon.lv + 1 ||
                 thisDigimon.lv == digimon.lv ||
+                (thisDigimon.lv == 7 && digimon.lv == 3) ||
                 (thisDigimon.lv >= digimon.lv && thisDigimon.form == 9))) {
                 nextForms.push(thisDigimon);
             }
             if(level > 1 && thisDigimon.evol.includes(digimon.img) && (
                 thisDigimon.lv == level - 1 ||
                 thisDigimon.lv == level ||
+                (thisDigimon.lv == 3 && digimon.lv == 7) ||
                 (thisDigimon.lv <= level && digimon.form == 9))) {
                 priorForms.push(thisDigimon);
             }
@@ -58,6 +60,26 @@ const getRandomDigiEgg = () => {
     return 'digiegg_'+['black','blue','green','purple','red','yellow'][Math.floor(Math.random() * 6)];
 }
 
-// const getSpritesWithoutAuthors = () => {
-//     return digimons.filter(digimon => getAuthors(digimon.authors).includes('undefined') );
+/**
+ * Get sprites without authors
+ * @returns obj with sprites without authors
+ */
+const getSpritesWithoutAuthors = () => {
+    return digimons.filter(digimon => getAuthors(digimon.authors).includes('Authors not found') );
+}
+
+// const getMaxHeightAndWidth = () => {
+//     let height = 0;
+//     let width = 0;
+//     let levels = [];
+//     for (let level = 1 ; level <= 7; level++) {
+//         for (let element of digimonContainers[level-1].childNodes){
+//             if (element.tagName == "IMG"){
+//                 width = element.width > width ? element.width : width;
+//                 height = element.height > height ? element.height : height;
+//             }
+//         }
+//         levels.push({ maxHeigt: height, maxWidth: width});
+//     }
+//     return levels;
 // }

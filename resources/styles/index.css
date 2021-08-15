@@ -1,0 +1,166 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.Press-Start-2P-font {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+}
+
+.VT323-font {
+  font-family: 'VT323', monospace;
+  font-size: 14px;
+}
+
+/* UI ELEMENTS */
+.-dark-theme {
+  background-color: #2a3f5b;
+}
+
+.-forms-bar {
+  overflow: hidden;
+  position: relative;
+}
+
+.-title-info {
+  width: 23%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.-nav-tabs {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.-nav-bar {
+  width: 75%;
+}
+
+.-nav-link,
+.-title-info {
+  background-color: #26374e;
+  color: white;
+  border: 3px solid white !important;
+  border-bottom: 0px !important;
+  margin-left: -2px;
+  padding: 0.3rem;
+}
+
+.-nav-link.active,
+.-title-info {
+  background-color: #192638 !important;
+  color: white !important;
+  opacity: 0.8;
+  background-image: linear-gradient(#131f2f 1px, transparent 1px),
+  linear-gradient(to right, #131f2f 1px, #192638 1px);
+  background-size: 20px 20px;
+}
+
+.-background {
+  background-image: linear-gradient(#131f2f 1px, transparent 1px),
+  linear-gradient(to right, #131f2f 1px, #192638 1px);
+  background-size: 20px 20px;
+}
+
+.-tab-content {
+  background-color: transparent !important;
+  color: white !important;
+  border: 3px solid white !important;
+  border-radius: .25rem;
+  margin-top: -2px;
+  height: 600px;
+  overflow-y: scroll;
+  text-align: center;
+  border-right: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.-digimon,
+.-details-item-img {
+  height: 65px;
+  width: 65px;
+  overflow: hidden;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #5174a4;
+  border-radius: 0 5px 0 5px;
+  background-color: #2a3f5b;
+}
+
+.-digimon.-box-fresh {
+  height: 25px;
+  width: 25px;
+}
+
+.-digimon.-box-intraining {
+  height: 35px;
+  width: 35px;
+}
+
+.-digimon.-box-rookie {
+  height: 45px;
+  width: 45px;
+}
+
+.-digimon.-box-champion,
+.-digimon.-box-armor {
+  height: 65px;
+  width: 65px;
+}
+
+.-digimon.-box-ultimate,
+.-digimon.-box-hybrid {
+  height: 75px;
+  width: 75px;
+}
+
+.-digimon.-box-mega,
+.-digimon.-box-ultra {
+  height: 90px;
+  width: 90px;
+}
+
+.-tree-content {
+  background-color: transparent !important;
+  color: white !important;
+  border: 3px solid white !important;
+  border-radius: .25rem;
+  margin-top: -2px;
+  height: 600px;
+  text-align: center;
+  border-left: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+/* SCROLL */
+.-tab-content::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.-tab-content::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.-tab-content::-webkit-scrollbar-thumb {
+  background-color: #c8c8c8;
+  border-radius: 10px;
+}
+
+.-details-badge {
+  background-color: #2a3f5b !important;
+}
+
+.-details-img-container {
+  height: 300px;
+  max-height: 300px;
+}
