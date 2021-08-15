@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="SGS">
+  <title>Digimon index</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-bottom/">
+  <!-- Resources -->
+  <link href="resources/fontawesome-5.15.2/css/all.css" rel="stylesheet">
+  <link href="resources/bootstrap-5.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="resources/bootstrap-5.0.0/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <link href="resources/styles/list.css" rel="stylesheet">
+  <script src="resources/scripts/mini_db.js" type="text/javascript"></script>
+  <script src="resources/scripts/constant.js" type="text/javascript"></script>
+  <script src="resources/scripts/utils.js" type="text/javascript"></script>
+  <script src="resources/scripts/list.js" type="text/javascript"></script>
+  <!-- Favicons -->
+  <link rel="shorcut icon" type="image/png" href="resources/icon.png">
+  <meta name="theme-color" content="#7952b3">
+</head>
+
+<body onload="readyIndex()" class="-bg h-100">
+
+  <div class="text-center text-white">
+    <header class="w-md-75 w-75 mx-auto p-3 mb-md-5 mb-4">
+      <h3 class="float-start mb-0">Digidex</h3>
+      <nav class="nav justify-content-center float-end -nav-masthead">
+        <a class="nav-link active" aria-current="page" href="#">
+          <i class="fas fa-dragon d-block d-sm-block d-md-none"></i>
+          <span class="d-none d-sm-none d-md-block">Digimon List</span>
+        </a>
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-project-diagram d-block d-sm-block d-md-none"></i>
+          <span class="d-none d-sm-none d-md-block">Tree evolution</span>
+        </a>
+      </nav>
+    </header>
+
+    <h1>Digimon list</h1>
+    <span class="badge bg-info -border-radius -fs-sm">
+      <i class="fas fa-info-circle"></i> Click on a digimon!!
+    </span>
+    <div class="w-75 mx-auto p-3">
+      <div class="input-group input-group-sm">
+        <span class="input-group-text fst-normal -fs-x-sm">Name:</span>
+        <input type="text" class="form-control -fs-x-sm" id="name" name="name" oninput="searchDigimon()">
+        <button class="btn btn-secondary text-white" id="button-filter" onclick="clearFilterDigimon()"><i
+            class="fas fa-backspace"></i></button>
+      </div>
+      <div class="input-group input-group-sm mt-1">
+        <span class="input-group-text fst-normal -fs-x-sm">Form:</span>
+        <select class="form-select -fs-x-sm" id="form" name="form" onchange="searchDigimon()">
+          <option selected value="">Choose...</option>
+        </select>
+        <span class="input-group-text fst-normal -fs-x-sm">Attribute:</span>
+        <select class="form-select -fs-x-sm" id="attribute" name="attribute" onchange="searchDigimon()">
+          <option selected value="">Choose...</option>
+        </select>
+        <span class="input-group-text fst-normal -fs-x-sm">Type:</span>
+        <select class="form-select -fs-x-sm" id="type" name="type" onchange="searchDigimon()">
+          <option selected value="">Choose...</option>
+        </select>
+      </div>
+    </div>
+
+    <main class="container mt-4 pt-4 mb-4 py-5 px-4 -pb-9">
+      <div id="container-l1" name="digimon-container" class="text-center"> </div>
+      <div id="container-l2" name="digimon-container" class="text-center"> </div>
+      <div id="container-l3" name="digimon-container" class="text-center"> </div>
+      <div id="container-l4" name="digimon-container" class="text-center"> </div>
+      <div id="container-l5" name="digimon-container" class="text-center"> </div>
+      <div id="container-l6" name="digimon-container" class="text-center"> </div>
+      <div id="container-l7" name="digimon-container" class="text-center"> </div>
+    </main>
+
+    <footer class="fixed-bottom m-0 w-100 bg-primary bg-gradient text-start -fs-sm -menu">
+      <p class="m-0 p-4 pb-3 -fs-x-sm">
+        <i class="fas fa-info-circle"></i>
+        Digimon, Digital Monsters, and all related characters and monsters are the property of Akiyoshi Hondo and Toei
+        Animation. Bandai too. <br>
+        This fanart page is intended for entertainment purposes only.
+      </p>
+    </footer>
+  </div>
+
+  <div class="modal fade" id="details-modal" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-md modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content -bg-details-container" id="details-container">
+        <div class="modal-header border-0 py-2">
+          <h4 class="text-light fw-bolder fst-italic m-0" id="details-name"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body py-0">
+          <div class="row">
+            <div class="col-12 text-center position-relative">
+              <img class="-digimon-detail-img" id="details-img"
+                src="resources/img/sprites/x5/omnimon_merciful_mode.png">
+              <div class="position-absolute top-0 start-0 ms-2" id="details-item-img"></div>
+            </div>
+            <div class="col-12">
+              <div class="alert alert-primary py-1 px-3 m-0 -details">
+                <div class="row">
+                  <div class="col-6">
+                    <span class="badge -border-radius text-light bg-primary bg-gradient">Form:</span>
+                    <span class="fw-bold" id="details-form"></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="badge -border-radius text-light bg-primary bg-gradient">Attribute:</span>
+                    <span class="fw-bold" id="details-attribute"></span>
+                  </div>
+                  <div class="col-12">
+                    <span class="badge -border-radius text-light bg-primary bg-gradient">Type:</span>
+                    <span class="fw-bold" id="details-type"></span>
+                  </div>
+                </div>
+                <hr class="m-2">
+                <div id="details-preevolutions">
+                  <span class="badge -border-radius text-light bg-info bg-gradient -evolution-header">Prior forms</span>
+                  <div class="alert alert-info text-center p-1 mb-2 -evolutions-container"></div>
+                </div>
+                <div id="details-evolutions">
+                  <span class="badge -border-radius text-light bg-info bg-gradient -evolution-header">Next forms</span>
+                  <div class="alert alert-info text-center p-1 mb-2 -evolutions-container"></div>
+                </div>
+                <div class="row justify-content-end">
+                  <div class="col-5 text-end">
+                    <span class="badge alert-primary text-wrap text-end p-1 m-0 -fs-xx-sm" id="details-authors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
