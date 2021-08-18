@@ -79,7 +79,7 @@ const showDetails = (digimonIndex) => {
       if(digimonDetail.digimental){
         for (let item of digimonDetail.digimental.split('/')){
           detailsItemImg.innerHTML += `<div class="mt-1"><div class="position-relative -details-item-img text-center p-1">
-            <img class="position-absolute top-50 start-50 translate-middle" src="resources/img/sprites/x2/${item}.png">
+            <img class="position-absolute top-50 start-50 translate-middle" src="resources/img/sprites/x2/${item.toLowerCase()}.png">
           </div></div>`;
         }
       }
