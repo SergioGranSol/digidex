@@ -1,0 +1,107 @@
+/* NAVS */
+.-forms-bar {
+  overflow: hidden;
+  position: relative;
+}
+
+.-title-info {
+  width: 23%;
+  height: 100%;
+  position: absolute;
+  left: 5px;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.-nav-tabs {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.-nav-bar {
+  width: 75%;
+}
+
+.-nav-link,
+.-title-info {
+  background-color: #26374e;
+  color: white;
+  border: 3px solid white !important;
+  margin-left: -2px;
+  padding: 0.3rem;
+}
+
+.-nav-link.active,
+.-title-info {
+  background-color: #192638 !important;
+  color: white !important;
+  border-bottom: 0px !important;
+  background-image: linear-gradient(#131f2f 1px, transparent 1px),
+  linear-gradient(to right, #131f2f 1px, #192638 1px);
+  background-size: 20px 20px;
+}
+
+/* DIGIMON LIST */
+.-tab-content {
+  background-color: transparent !important;
+  color: white !important;
+  border: 3px solid white !important;
+  border-radius: .25rem;
+  margin-top: -3px;
+  height: calc(100vh - 155px);
+  text-align: center;
+  border-left: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.-digimon-container {
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.-digimon,
+.-details-item-img {
+  height: 65px;
+  width: 65px;
+  overflow: hidden;
+  display: inline-block;
+  border: 1px solid #5174a4;
+  border-radius: 0 7px 0 7px;
+  background-color: #2a3f5b;
+}
+
+.-digimon {
+  cursor: pointer;
+  height: 65px;
+  width: 65px;
+}
+
+/* DIGIMON DETAILS */
+.-details-content {
+  background-color: transparent !important;
+  border: 3px solid white !important;
+  border-radius: .25rem;
+  margin-top: -3px;
+  height: calc(100vh - 155px);
+  width: 350px;
+  text-align: center;
+  border-right: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.-details-badge {
+  background-color: #2a3f5b !important;
+}
+
+.-details-img-container {
+  height: 300px;
+  max-height: 300px;
+}
+
+.-digimon-detail-img {
+  max-height: 75%;
+  max-width: 95%;
+  transform: translate(-50%, -50%) scale(75%) !important;
+}
