@@ -11,211 +11,155 @@
   <link href="resources/fontawesome-5.15.2/css/all.css" rel="stylesheet">
   <link href="resources/bootstrap-5.0.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="resources/bootstrap-5.0.0/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-  <link href="resources/styles/main.css" rel="stylesheet">
-  <link href="resources/styles/digidex.css" rel="stylesheet">
+  <link href="resources/styles/list.css" rel="stylesheet">
   <script src="resources/scripts/mini_db.js" type="text/javascript"></script>
   <script src="resources/scripts/constant.js" type="text/javascript"></script>
   <script src="resources/scripts/utils.js" type="text/javascript"></script>
-  <script src="resources/scripts/digidex.js" type="text/javascript"></script>
-  <script src="resources/scripts/main.js" type="text/javascript"></script>
+  <script src="resources/scripts/list.js" type="text/javascript"></script>
   <!-- Favicons -->
   <link rel="shorcut icon" type="image/png" href="resources/icon.png">
   <meta name="theme-color" content="#7952b3">
 </head>
 
-<body onload="readyIndex();" class="VT323-font -dark-theme">
-  <nav class="navbar p-0">
-    <div class="container-fluid ps-0">
-      <div class="-header-border pe-1 pb-1 bg-primary">
-        <div class="-header pt-3 ps-2 -background">
-          <img src="resources/img/digidex.png" alt="digidex" class="d-inline-block align-text-top">
-          <span class="align-middle text-white fst-italic fs-2">
-            DIGIDEX
-          </span>
-        </div>
+<body onload="readyIndex()" class="-bg">
+
+  <div class="text-white">
+    <header class="-header fixed-top bg-primary bg-gradient">
+      <img class="-header-label" src="resources/img/label.png" alt="Digidex">
+    </header>
+
+    <div class="w-75 mx-auto mt-5 p-3">
+      <div class="input-group input-group-sm">
+        <span class="input-group-text fst-normal -fs-x-sm">Name:</span>
+        <input type="text" class="form-control -fs-x-sm" id="name" name="name" oninput="searchDigimon()">
+        <button class="btn btn-secondary text-white" id="button-filter" onclick="clearFilterDigimon()"><i
+            class="fas fa-backspace"></i></button>
       </div>
-      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-        <li class="nav-item ps-5" role="presentation">
-          <button class="nav-link -options active" id="pills-tab-digidex" data-bs-toggle="pill" data-bs-target="#pills-digidex" type="button" role="tab" aria-controls="pills-digidex" aria-selected="true">Digidex</button>
-        </li>
-        <li class="nav-item ps-5" role="presentation">
-          <button class="nav-link -options" id="pills-tab-line" data-bs-toggle="pill" data-bs-target="#pills-line" type="button" role="tab" aria-controls="pills-line" aria-selected="false">Line evolution maker</button>
-        </li>
-        <li class="nav-item ps-5" role="presentation">
-          <button class="nav-link -options" id="pills-tab-credits" data-bs-toggle="pill" data-bs-target="#pills-credits" type="button" role="tab" aria-controls="pills-credits" aria-selected="false">Credits</button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-digidex" role="tabpanel" aria-labelledby="pills-tab-digidex">
-      <main class="mx-5 mt-3 mb-1">
-        <div class="-forms-bar -z-100">
-          <div class="-title-info d-inline-block text-center float-start">Details</div>
-          <nav class="-nav-bar d-inline-block float-end">
-            <div class="nav nav-tabs nav-fill -nav-tabs me-0" id="nav-tab" role="tablist">
-              <button class="nav-link -nav-link active" id="nav-tab-fresh" data-bs-toggle="tab" data-bs-target="#nav-fresh" type="button" role="tab" aria-controls="nav-fresh" aria-selected="true">Fresh</button>
-              <button class="nav-link -nav-link" id="nav-tab-intraining" data-bs-toggle="tab" data-bs-target="#nav-intraining" type="button" role="tab" aria-controls="nav-intraining" aria-selected="false">In-training</button>
-              <button class="nav-link -nav-link" id="nav-tab-rookie" data-bs-toggle="tab" data-bs-target="#nav-rookie" type="button" role="tab" aria-controls="nav-rookie" aria-selected="false">Rookie</button>
-              <button class="nav-link -nav-link" id="nav-tab-champion" data-bs-toggle="tab" data-bs-target="#nav-champion" type="button" role="tab" aria-controls="nav-champion" aria-selected="false">Champion</button>
-              <button class="nav-link -nav-link" id="nav-tab-ultimate" data-bs-toggle="tab" data-bs-target="#nav-ultimate" type="button" role="tab" aria-controls="nav-ultimate" aria-selected="false">Ultimate</button>
-              <button class="nav-link -nav-link" id="nav-tab-mega" data-bs-toggle="tab" data-bs-target="#nav-mega" type="button" role="tab" aria-controls="nav-mega" aria-selected="false">Mega</button>
-              <button class="nav-link -nav-link" id="nav-tab-ultra" data-bs-toggle="tab" data-bs-target="#nav-ultra" type="button" role="tab" aria-controls="nav-ultra" aria-selected="false">Ultra</button>
-              <button class="nav-link -nav-link" id="nav-tab-hybrid" data-bs-toggle="tab" data-bs-target="#nav-hybrid" type="button" role="tab" aria-controls="nav-hybrid" aria-selected="false">Hybrid</button>
-              <button class="nav-link -nav-link" id="nav-tab-armor" data-bs-toggle="tab" data-bs-target="#nav-armor" type="button" role="tab" aria-controls="nav-armor" aria-selected="false">Armor</button>
-            </div>
-          </nav>
-        </div>
-        <div class="row -background -main-conten position-relative rounded">
-          <div class="col-auto px-0">
-            <div class="-details-content px-3">
-              <div class="my-auto">
-                <div class="text-center position-relative -details-img-container">
-                  <h4 class="mt-3"><span id="details-name" class="badge bg-primary fw-normal border border-info border-3 w-75">DIGIMON</span></h4>
-                  <img class="-digimon-detail-img position-absolute top-50 start-50 " id="details-img">
-                  <div class="position-absolute bottom-0 start-0 ms-2 mb-2" id="details-item-img"></div>
-                </div>
-                <div class="text-start mx-2">
-                  <div class="row">
-                    <div class="col-2 pe-0">
-                      <ul class="list-group">
-                        <li class="list-group-item py-0 px-1 border border-info border-1 active" aria-current="true">Level:</li>
-                        <li id="details-level" class="list-group-item py-0 px-1 text-center">&nbsp;</li>
-                      </ul>
-                    </div>
-                    <div class="col-5">
-                      <ul class="list-group">
-                        <li class="list-group-item py-0 px-1 border border-info border-1 active" aria-current="true">Form:</li>
-                        <li id="details-form" class="list-group-item py-0 px-1">&nbsp;</li>
-                      </ul>
-                    </div>
-                    <div class="col-5 ps-0">
-                      <ul class="list-group">
-                        <li class="list-group-item py-0 px-1 border border-info border-1 active" aria-current="true">Attribute:</li>
-                        <li id="details-attribute" class="list-group-item py-0 px-1">&nbsp;</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <hr class="my-2 border border-secondary">
-                  <ul class="list-group">
-                    <li class="list-group-item py-0 px-1 border border-info border-1 active" aria-current="true">Type:</li>
-                    <li id="details-type" class="list-group-item py-0 px-1">&nbsp;</li>
-                  </ul>
-                  <hr class="my-2 border border-secondary">
-                  <ul class="list-group">
-                    <li class="list-group-item py-0 px-1 border border-info border-1 active" aria-current="true">Version:</li>
-                    <li id="details-version" class="list-group-item py-0 px-1">&nbsp;</li>
-                  </ul>
-                  <hr class="my-2 border border-secondary">
-                  <div class="text-white text-end">
-                    <span id="details-authors"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col px-0">
-            <div class="tab-content -tab-content py-4 pe-3" id="nav-tabContent">
-              <div class="input-group input-group-sm mb-3">
-                <span class="input-group-text text-white bg-info" id="digidex-label-name">Name:</span>
-                <input type="text" class="form-control" id="digidex-search-name" placeholder="Some name" oninput="searchDigimon()">
-                <span class="input-group-text text-white bg-info" id="digidex-label-attribute">Attribute</span>
-                <input type="text" class="form-control" id="digidex-search-attribute" placeholder="Some attribute" oninput="searchDigimon()">
-              </div>
-              <div class="tab-pane fade show active" id="nav-fresh" role="tabpanel" aria-labelledby="nav-tab-fresh">
-                <div class="p-4 pt-2 -digimon-container -custom-scroll" data-element="digimon-container-fresh" data-loaded="false"></div>
-              </div>
-              <div class="tab-pane fade" id="nav-intraining" role="tabpanel" aria-labelledby="nav-tab-intraining">
-                <div class="p-4 pt-2 -digimon-container -custom-scroll" data-element="digimon-container-intraining" data-loaded="false"></div>
-              </div>
-              <div class="tab-pane fade" id="nav-rookie" role="tabpanel" aria-labelledby="nav-tab-rookie">
-                <div class="p-4 pt-2 -digimon-container -custom-scroll" data-element="digimon-container-rookie" data-loaded="false"></div>
-              </div>
-              <div class="tab-pane fade" id="nav-champion" role="tabpanel" aria-labelledby="nav-tab-champion">
-                <div class="p-4 pt-2 -digimon-container -custom-scroll" data-element="digimon-container-champion" data-loaded="false"></div>
-              </div>
-              <div class="tab-pane fade" id="nav-ultimate" role="tabpanel" aria-labelledby="nav-tab-ultimate">
-                <div class="p-4 pt-2 -digimon-container -custom-scroll" data-element="digimon-container-ultimate" data-loaded="false"></div>
-              </div>
-              <div class="tab-pane fade" id="nav-mega" role="tabpanel" aria-labelledby="nav-tab-mega">
-                <div class="p-4 pt-2 -digimon-container -custom-scroll" data-element="digimon-container-mega" data-loaded="false"></div>
-              </div>
-              <div class="tab-pane fade" id="nav-ultra" role="tabpanel" aria-labelledby="nav-tab-ultra">
-                <div class="p-4 pt-2 -digimon-container -custom-scroll" data-element="digimon-container-ultra" data-loaded="false"></div>
-              </div>
-              <div class="tab-pane fade" id="nav-hybrid" role="tabpanel" aria-labelledby="nav-tab-hybrid">
-                <div class="p-4 pt-2 -digimon-container -custom-scroll" data-element="digimon-container-hybrid" data-loaded="false"></div>
-              </div>
-              <div class="tab-pane fade" id="nav-armor" role="tabpanel" aria-labelledby="nav-tab-armor">
-                <div class="p-4 pt-2 -digimon-container -custom-scroll" data-element="digimon-container-armor" data-loaded="false"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-    <div class="tab-pane fade" id="pills-line" role="tabpanel" aria-labelledby="pills-tab-line"><div class="mx-5 mt-3 mb-1">
-        <div class="-big-container -background position-relative">
-            <div class="position-absolute top-50 start-50 translate-middle">
-              <h2>COMING SOON</h2>
-            </div>
-        </div>
+      <div class="input-group input-group-sm mt-1">
+        <span class="input-group-text fst-normal -fs-x-sm">Stage:</span>
+        <select class="form-select -fs-x-sm" id="stage" name="stage" aria-label="stage" onchange="searchDigimon()">
+          <option selected value="">Choose...</option>
+        </select>
+        <span class="input-group-text fst-normal -fs-x-sm">Attribute:</span>
+        <select class="form-select -fs-x-sm" id="attribute" name="attribute" aria-label="attribute" onchange="searchDigimon()">
+          <option selected value="">Choose...</option>
+        </select>
+        <span class="input-group-text fst-normal -fs-x-sm">Type:</span>
+        <select class="form-select -fs-x-sm" id="type" name="type" aria-label="type" onchange="searchDigimon()">
+          <option selected value="">Choose...</option>
+        </select>
+      </div>
+      <div class="input-group input-group-sm mt-1">
+        <span class="input-group-text fst-normal -fs-x-sm">Version:</span>
+        <select class="form-select -fs-x-sm" id="version" name="version" aria-label="version" onchange="searchDigimon()">
+          <option selected value="">Choose...</option>
+        </select>
+        <span class="input-group-text fst-normal -fs-x-sm">from:</span>
+        <select class="form-select -fs-x-sm" id="from" name="from" aria-label="from" onchange="searchDigimon()" disabled="true">
+          <option selected value="">Choose...</option>
+        </select>
+      </div>
+      <div class="input-group input-group-sm mt-1">
+        <span class="input-group-text fst-normal -fs-x-sm">Digievolution requirement:</span>
+        <select class="form-select -fs-x-sm" id="evolutionRequirement" name="evolutionRequirement" aria-label="evolutionRequirement" onchange="searchDigimon()">
+          <option selected value="">Choose...</option>
+        </select>
+      </div>
+      <div class="input-group input-group-sm mt-1">
+        <span class="input-group-text fst-normal -fs-x-sm">Author:</span>
+        <select class="form-select -fs-x-sm" id="author" name="author" aria-label="author" onchange="searchDigimon()">
+          <option selected value="">Choose...</option>
+        </select>
       </div>
     </div>
-    <div class="tab-pane fade" id="pills-credits" role="tabpanel" aria-labelledby="pills-tab-credits">
-      <div class="mx-5 mt-3 mb-1">
-        <div class="-big-container -background">
-          <div class="m-5 -authors -custom-scroll">
-            <h3>Authors & artists:</h3>
-            <h5>Follow them and support their work!</h5>
-            <ul class="list-group list-group-flush text-center">
-              <li class="list-group-item bg-transparent p-1">ZebubAl-Zemmons <a href="https://www.deviantart.com/zebubal-zemmons"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Dragonrod342 <a href="https://www.deviantart.com/dragonrod342"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">SergioGranSol <a href="https://www.deviantart.com/sergiop343"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a> </li>
-              <li class="list-group-item bg-transparent p-1">Lucho9 <a href="https://www.deviantart.com/lucho9"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Opdisk <a href="https://www.deviantart.com/opdisk"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">CadejoWhite <a href="https://dibujando.net/cadejowhite/galeria"><span class="badge -bg-link"><i class="fas fa-link"></i> </i> Dibujando <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Topaz66 <a href="https://www.deviantart.com/topaz66"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Arcanin1412 <a href="https://www.deviantart.com/arcanin1412"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Neroesaurus <a href="https://www.deviantart.com/neroesaurus"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Demo9ic <a href="https://www.deviantart.com/demo9ic"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">BowchersDrawners <a href="https://www.deviantart.com/bowchersdrawners"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Matykiller <a href="https://www.deviantart.com/matykiller"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Sharkmon <a href="https://www.deviantart.com/sharkmon"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">WolfryHedgies <a href="https://www.deviantart.com/wolfryhedgies"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Maxtyrannus <a href="https://www.deviantart.com/maxtyrannus"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Detcher <a href="https://www.deviantart.com/detcher"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">ScorchedDragonStudio <a href="https://www.deviantart.com/scorcheddragonstudio"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Pepino978 <a href="https://www.deviantart.com/pepino978"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">VictoryD <a href="https://twitter.com/_VictoryD_"><span class="badge -bg-twitter"><i class="fab fa-twitter"> </i> Twitter <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Exty <a href="https://twitter.com/extyrannomon"><span class="badge -bg-twitter"><i class="fab fa-twitter"> </i> Twitter <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Digital Mosters Almana <a href="http://www.dma.wtw-x.net"><span class="badge -bg-link"><i class="fas fa-link"></i> </i> Digital Mosters Almana <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">V-Pet Sprites <a href="https://wikimon.net/Category:V-Pet_Sprites"><span class="badge -bg-link"><i class="fas fa-link"></i> </i> Wikimon <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Videogame Sprites <a href="https://wikimon.net/Category:Video_Game_Sprites"><span class="badge -bg-link"><i class="fas fa-link"></i> </i> Wikimon <i class="fas fa-external-link-alt"></i></i></span></a></li>
-            </ul>
-            <hr class="my-2 border border-secondary">
-            <h3>Programming & UI:</h3>
-            <ul class="list-group list-group-flush text-center">
-              <li class="list-group-item bg-transparent p-1">SergioGranSol <a href="https://www.deviantart.com/sergiop343"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a> </li>
-            </ul>
-            <hr class="my-2 border border-secondary">
-            <h3>Biography sources:</h3>
-            <ul class="list-group list-group-flush text-center">
-              <li class="list-group-item bg-transparent p-1">Wikimon <a href="https://wikimon.net"><span class="badge -bg-link"><i class="fas fa-link"></i> </i> Wikimon <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Digimon Wiki <a href="https://digimon.fandom.com/wiki/Digimon_Wiki"><span class="badge -bg-link"><i class="fas fa-link"></i> </i> Digimon Wiki <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Digital Mosters Almana <a href="http://www.dma.wtw-x.net"><span class="badge -bg-link"><i class="fas fa-link"></i> </i> Digital Mosters Almana <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">VilmonDigibits <a href="https://www.deviantart.com/vilmondigibits"><span class="badge -bg-devianart"><i class="fab fa-deviantart"> </i> DevianArt <i class="fas fa-external-link-alt"></i></i></span></a></li>
-              <li class="list-group-item bg-transparent p-1">Digimon Card Game <a href="https://en.digimoncard.com/"><span class="badge -bg-link"><i class="fas fa-link"></i> </i> Digimon Card Game <i class="fas fa-external-link-alt"></i></i></span></a></li>
-            </ul>
+
+    <main class="container px-4 -pb-9">
+      <div id="container-l1" name="digimon-container" class="text-center"> </div>
+      <div id="container-l2" name="digimon-container" class="text-center"> </div>
+      <div id="container-l3" name="digimon-container" class="text-center"> </div>
+      <div id="container-l4" name="digimon-container" class="text-center"> </div>
+      <div id="container-l5" name="digimon-container" class="text-center"> </div>
+      <div id="container-l6" name="digimon-container" class="text-center"> </div>
+      <div id="container-l7" name="digimon-container" class="text-center"> </div>
+      <div id="container-l8" name="digimon-container" class="text-center"> </div>
+      <div id="container-l9" name="digimon-container" class="text-center"> </div>
+      <div id="digimon-not-found" class="text-center text-light fw-bolder" role="alert">
+        <div class="text-center">
+          <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="fixed-bottom m-0 w-100 bg-primary bg-gradient text-start -fs-sm -menu">
+      <p class="m-0 p-4 pb-3 -fs-x-sm">
+        <i class="fas fa-info-circle"></i>
+        Digimon, Digital Monsters, and all related characters and monsters are the property of Akiyoshi Hondo and Toei
+        Animation.<br>
+        Bandai too. This fanart page is intended for entertainment purposes only.
+      </p>
+    </footer>
+  </div>
+
+  <div class="modal fade" id="details-modal" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-md modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content -bg-details-container" id="details-container">
+        <div class="modal-header border-0 py-2">
+          <h4 class="text-light fw-bolder fst-italic m-0" id="details-name"></h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body py-0">
+          <div class="row">
+            <div class="col-12 text-center position-relative">
+              <img class="-digimon-detail-img" id="details-img"
+                src="resources/img/sprites/x5/omnimon_merciful_mode.png">
+            </div>
+            <div class="col-12">
+              <div class="alert alert-primary py-1 px-3 m-0 -details">
+                <div class="row">
+                  <div class="col-6">
+                    <span class="badge -border-radius text-light bg-primary bg-gradient">Stage:</span>
+                    <span class="fw-bold" id="details-stage"></span>
+                  </div>
+                  <div class="col-6">
+                    <span class="badge -border-radius text-light bg-primary bg-gradient">Attribute:</span>
+                    <span class="fw-bold" id="details-attribute"></span>
+                  </div>
+                  <div class="col-12">
+                    <span class="badge -border-radius text-light bg-primary bg-gradient">Type:</span>
+                    <span class="fw-bold" id="details-type"></span>
+                  </div>
+                </div>
+                <hr class="m-2">
+                <div id="details-evolution-requirement">
+                  <span class="badge -border-radius text-light bg-primary bg-gradient">Digievolution requirement</span> :
+                  <hr class="m-2">
+                </div>
+                <div id="details-preevolutions">
+                  <span class="badge -border-radius text-light bg-info bg-gradient -evolution-header">Prior stages</span>
+                  <div class="alert alert-info text-center p-1 mb-2 -evolutions-container"></div>
+                </div>
+                <div id="details-evolutions">
+                  <span class="badge -border-radius text-light bg-info bg-gradient -evolution-header">Next stages</span>
+                  <div class="alert alert-info text-center p-1 mb-2 -evolutions-container"></div>
+                </div>
+                <div class="row justify-content-end">
+                  <div class="col-6 text-end">
+                    <span class="badge alert-primary text-wrap text-end p-1 m-0 -fs-xx-sm" id="details-version"></span><br>
+                    <span class="badge alert-primary text-wrap text-end p-1 m-0 -fs-xx-sm" id="details-authors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="mx-auto text-center">
-    <span class="badge text-wrap -message" style="width: 50vw; background-color: #26374e;">Digimon, Digital Monsters, and all related
-      characters and monsters are the property of Akiyoshi Hondo and Toei Animation. Bandai
-      too. This fanart page is intended for entertainment purposes only.</span>
-  </div>
+  <button onclick="goToTop()" id="backToTop-button" class="btn btn-primary -backToTop-button" title="Go to top">
+    <i class="fas fa-angle-double-up"></i>
+  </button>
+
 </body>
