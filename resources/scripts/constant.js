@@ -1,19 +1,21 @@
 let auxTypes = [];
+let auxEvolutionRequirements = [];
+let auxVersions = [];
 
 const digimons = (() => {
   let db = [];
   for (let i = 0; i < MINI_DB.length; i++) {
     let digimonDetails = MINI_DB[i].split("|");
     db.push({
-      name: digimonDetails[0],
-      img: digimonDetails[1],
-      lv: parseInt(digimonDetails[2]),
-      type: digimonDetails[3],
-      form: parseInt(digimonDetails[4]),
-      digimental: digimonDetails[5],
-      fusion: digimonDetails[6] === 'true',
+      id: digimonDetails[0],
+      name: digimonDetails[1],
+      img: digimonDetails[2],
+      lv: parseInt(digimonDetails[3]),
+      type: digimonDetails[4],
+      stage: parseInt(digimonDetails[5]),
+      evolutionRequirement: digimonDetails[6],
       attribute: parseInt(digimonDetails[7]),
-      evol: digimonDetails[8].split(","),
+      evolutions: digimonDetails[8].split(","),
       authors: {
         madeBy: parseInt(digimonDetails[9]),
         editBy: parseInt(digimonDetails[10]),
@@ -21,13 +23,11 @@ const digimons = (() => {
         redesign: parseInt(digimonDetails[12]),
         from: parseInt(digimonDetails[13])
       },
-      version: digimonDetails[14],
-      adjustment: digimonDetails[15],
-      hidden: digimonDetails[16] === 'true'
+      version: digimonDetails[14]
     });
 
     /** Fill types constant while fill digimons constant */
-    let subOptions = digimonDetails[3].split('/');
+    let subOptions = digimonDetails[4].split('/');
     if (subOptions.length == 1 && !auxTypes.includes(subOptions[0]) && subOptions[0] != '') {
       auxTypes.push(subOptions[0]);
     } else {
@@ -35,8 +35,25 @@ const digimons = (() => {
         if (!auxTypes.includes(subOp) && subOp != '') auxTypes.push(subOp);
       }
     }
+
+    /** Fill evolution requirements constant while fill digimons constant */
+    subOptions = digimonDetails[6].split('/');
+    if (subOptions.length == 1 && !auxEvolutionRequirements.includes(subOptions[0]) && subOptions[0] != '') {
+      auxEvolutionRequirements.push(subOptions[0]);
+    } else {
+      for (let subOp of subOptions) {
+        if (!auxEvolutionRequirements.includes(subOp) && subOp != '') auxEvolutionRequirements.push(subOp);
+      }
+    }
+
+    /** Fill versions constant */
+    if (digimonDetails[14] != '' && !auxVersions.includes(digimonDetails[14])) {
+      auxVersions.push(digimonDetails[14]);
+    }
+
   }
-  return db.sort((previous, index) => (previous.img > index.img) ? 1 : -1);
+  // return db.sort((previous, index) => (previous.img > index.img) ? 1 : -1);
+  return db.sort((previous, index) => previous.id - index.id);
 })();
 
 const attributes = {
@@ -75,7 +92,7 @@ viewBox="0 0 172 172"
 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#f1c40f"><path d="M150.5,46.58333l-32.25,-28.66667v57.33333z"></path><path d="M121.83333,57.32975c0,0 -64.5,-0.00358 -68.08333,0c-3.58333,0.00358 -3.58333,3.57258 -3.58333,3.57258v14.34767h-21.5v-17.92025c0,-11.85725 9.64275,-21.49642 21.5,-21.49642h71.66667zM21.5,125.41667l32.25,28.66667v-57.33333z"></path><path d="M50.16667,114.67383c0,0 64.5,0 68.08333,0c3.58333,-0.00717 3.58333,-3.57617 3.58333,-3.57617v-14.34767h21.5v17.92383c0,11.85367 -9.64275,21.49283 -21.5,21.49283h-71.66667z"></path></g></g></svg>`
 }
 
-const forms = {
+const stages = {
   1: "Fresh",
   2: "In-Training",
   3: "Rookie",
@@ -88,6 +105,13 @@ const forms = {
 }
 
 const types = auxTypes.sort((previous, index) => (previous > index) ? 1 : -1);
+delete auxTypes;
+
+const evolutionRequirements = auxEvolutionRequirements.sort((previous, index) => (previous > index) ? 1 : -1);
+delete auxEvolutionRequirements;
+
+const versions = auxVersions.sort((previous, index) => (previous > index) ? 1 : -1);
+delete auxVersions;
 
 const authors = {
   1: 'Zebub',
@@ -111,13 +135,14 @@ const authors = {
   19: 'Pepino978',
   20: 'VictoryD',
   21: 'Extyrannomon',
-  22: 'Digital Mosters Almanac'
+  22: 'Digital Mosters Almanac',
+  23: 'Thousand13'
 }
 
-const description = {
+const spriteDescription = {
   redesign: (name, name2) =>
-    `Sprite ${name == authors[16] ? 'from' : 'made by'} <span class="fst-italic">${name}</span> based on <span class="fst-italic">${name2}</span>${name2.charAt(name2.length-1) == 's' ? '\'' : '\'s'} art`,
-  made: name => `Sprite ${name == authors[16] ? 'from' : 'made by'} <span class="fst-italic">${name}</span>`,
-  edit: name => `Edit by <span class="fst-italic">${name}</span>`,
+    `Sprite ${name == authors[16] ? 'from' : 'made by'} ${name} based on ${name2}${name2.charAt(name2.length-1) == 's' ? '\'' : '\'s'} art`,
+  made: name => `Sprite ${name == authors[16] ? 'from' : 'made by'} ${name}`,
+  edit: name => `Edit by ${name}`,
   recolor: name => `This sprite is recolored`
 }
