@@ -25,6 +25,7 @@
 .-bg {
   background: url(../img/bg.png),
     linear-gradient(#8e9eab, #8e9eab);
+  background-color: #8e9eab;
 }
 
 .-header-label {
