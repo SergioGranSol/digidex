@@ -24,53 +24,58 @@
 <body onload="readyIndex()" class="-bg">
 
   <div class="text-white">
-    <header class="-header fixed-top bg-primary bg-gradient">
-      <img class="-header-label" src="resources/img/label.png" alt="Digidex">
+    <header class="-header d-flex justify-content-center fixed-top bg-primary bg-gradient">
+      <div class="-header-grey-bar position-absolute w-50"></div>
+      <img class="-header-label" src="resources/img/label2.png" alt="Digidex">
     </header>
 
     <div class="w-75 mx-auto mt-5 p-3">
       <div class="input-group input-group-sm">
         <span class="input-group-text fst-normal -fs-x-sm">Name:</span>
-        <input type="text" class="form-control -fs-x-sm" id="name" name="name" oninput="searchDigimon()">
-        <button class="btn btn-secondary text-white" id="button-filter" onclick="clearFilterDigimon()"><i
-            class="fas fa-backspace"></i></button>
+        <input type="text" class="form-control -fs-x-sm" placeholder="Writte a name (eg. *greymon)" id="name" name="name" oninput="searchDigimon()">
+        <button class="btn btn-dark bg-gradient text-white d-none" id="filter-button" onclick="clearFilterDigimon()">
+          <i class="fas fa-backspace"></i>
+        </button>
       </div>
       <div class="input-group input-group-sm mt-1">
-        <span class="input-group-text fst-normal -fs-x-sm">Stage:</span>
+        <span class="input-group-text fst-normal bg-gradient -fs-x-sm">Stage:</span>
         <select class="form-select -fs-x-sm" id="stage" name="stage" aria-label="stage" onchange="searchDigimon()">
           <option selected value="">Choose...</option>
         </select>
-        <span class="input-group-text fst-normal -fs-x-sm">Attribute:</span>
+        <span class="input-group-text fst-normal bg-gradient -fs-x-sm">Attribute:</span>
         <select class="form-select -fs-x-sm" id="attribute" name="attribute" aria-label="attribute" onchange="searchDigimon()">
           <option selected value="">Choose...</option>
         </select>
-        <span class="input-group-text fst-normal -fs-x-sm">Type:</span>
+        <span class="input-group-text fst-normal bg-gradient -fs-x-sm">Type:</span>
         <select class="form-select -fs-x-sm" id="type" name="type" aria-label="type" onchange="searchDigimon()">
           <option selected value="">Choose...</option>
         </select>
       </div>
       <div class="input-group input-group-sm mt-1">
-        <span class="input-group-text fst-normal -fs-x-sm">Version:</span>
+        <span class="input-group-text fst-normal bg-gradient -fs-x-sm">Version:</span>
         <select class="form-select -fs-x-sm" id="version" name="version" aria-label="version" onchange="searchDigimon()">
           <option selected value="">Choose...</option>
         </select>
-        <span class="input-group-text fst-normal -fs-x-sm">from:</span>
+        <span class="input-group-text fst-normal bg-gradient -fs-x-sm">from:</span>
         <select class="form-select -fs-x-sm" id="from" name="from" aria-label="from" onchange="searchDigimon()" disabled="true">
           <option selected value="">Choose...</option>
         </select>
       </div>
       <div class="input-group input-group-sm mt-1">
-        <span class="input-group-text fst-normal -fs-x-sm">Digievolution requirement:</span>
+        <span class="input-group-text fst-normal bg-gradient -fs-x-sm">Digievolution requirement:</span>
         <select class="form-select -fs-x-sm" id="evolutionRequirement" name="evolutionRequirement" aria-label="evolutionRequirement" onchange="searchDigimon()">
           <option selected value="">Choose...</option>
         </select>
       </div>
       <div class="input-group input-group-sm mt-1">
-        <span class="input-group-text fst-normal -fs-x-sm">Author:</span>
+        <span class="input-group-text fst-normal bg-gradient -fs-x-sm">Author:</span>
         <select class="form-select -fs-x-sm" id="author" name="author" aria-label="author" onchange="searchDigimon()">
           <option selected value="">Choose...</option>
         </select>
       </div>
+      <a class="fs-6 position-absolute text-decoration-none" style="right: 15%;" href="https://github.com/SergioGranSol/digidex">
+        <i class="fas fa-info-circle"></i> About Digidex
+      </a>
     </div>
 
     <main class="container px-4 -pb-9">
@@ -92,13 +97,16 @@
       </div>
     </main>
 
-    <footer class="fixed-bottom m-0 w-100 bg-primary bg-gradient text-start -fs-sm -menu">
-      <p class="m-0 p-4 pb-3 -fs-x-sm">
-        <i class="fas fa-info-circle"></i>
-        Digimon, Digital Monsters, and all related characters and monsters are the property of Akiyoshi Hondo and Toei
-        Animation.<br>
-        Bandai too. This fanart page is intended for entertainment purposes only.
-      </p>
+    <footer class="fixed-bottom m-0 w-100 text-start -fs-sm">
+      <div class="-footer-blue-bar position-absolute w-100 h-100"></div>
+      <div class="-footer bg-primary bg-gradient">
+        <p class="m-0 p-4 pb-3 -fs-x-sm">
+          <i class="fas fa-info-circle"></i>
+          Digimon, Digital Monsters, and all related characters and monsters
+          are the property of Akiyoshi Hondo and Toei Animation. Bandai too.
+          This fanart page is intended for entertainment purposes only.
+        </p>
+      </div>
     </footer>
   </div>
 
@@ -112,7 +120,7 @@
         <div class="modal-body py-0">
           <div class="row">
             <div class="col-12 text-center position-relative">
-              <img class="-digimon-detail-img" id="details-img"
+              <img class="-digimon-detail-img" id="details-img" alt="digimon"
                 src="resources/img/sprites/x5/omnimon_merciful_mode.png">
             </div>
             <div class="col-12">

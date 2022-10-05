@@ -112,6 +112,8 @@ const searchDigimon = () => {
     authorInput.previousElementSibling.classList.add("bg-info");
   } else authorInput.previousElementSibling.classList.remove("bg-info");
 
+  buttonFilter.classList.remove("d-none");
+
   /** Find digimons if filters aren't empty */
   if ((name != "" && name != "*") || stage != "" || attribute != "" || type != "" || evolutionRequirement != "" || version != "" || versionFrom != "" || author != "") {
     let digimonsFound = digimons.filter(digimon =>
@@ -161,6 +163,7 @@ const clearFilterDigimon = () => {
     versionFromInput.previousElementSibling.classList.remove("bg-info");
     versionFromInput.disabled = true;
     authorInput.previousElementSibling.classList.remove("bg-info");
+    buttonFilter.classList.add("d-none");
     loadDigimons(digimons);
   }
 }
@@ -194,6 +197,7 @@ const showDetails = (digimonId, level) => {
     /** Put data in elements */
     detailsName.innerHTML = `${digimonDetail.name} <span class="badge rounded-pill text-light bg-primary bg-gradient">Lv.${digimonDetail.lv}</span>`;
     detailsImg.setAttribute("src", `resources/img/sprites/x5/${digimonDetail.img}.png`);
+    detailsImg.setAttribute("alt", digimonDetail.name);
     detailsStage.innerHTML = stages[digimonDetail.stage];
     detailsAttribute.innerHTML = attributesIcons[digimonDetail.attribute] + attributes[digimonDetail.attribute];
     detailsType.innerHTML = digimonDetail.type;
@@ -268,7 +272,7 @@ const readyIndex = () => {
   for (let version in versions) versionFromInput.innerHTML += `<option value="${versions[version]}">${versions[version]}</option>`
   authorInput = document.getElementById("author");
   for (let author in authors) authorInput.innerHTML += `<option value="${author}">${authors[author]}</option>`
-  buttonFilter = document.getElementById("button-filter");
+  buttonFilter = document.getElementById("filter-button");
 
   /** Get details' modal */
   detailsModalElement = document.getElementById('details-modal');

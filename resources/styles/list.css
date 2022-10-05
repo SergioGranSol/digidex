@@ -32,6 +32,13 @@
   height: 46px;
 }
 
+.-header-grey-bar {
+  background-color: #334147;
+  height: 31px;
+  left: 0%;
+  z-index: -1;
+}
+
 .-header {
   max-height: 31px;
 }
@@ -45,9 +52,18 @@
     linear-gradient(#6fb1fc, #4364f7, #0052d4);
 }
 
-.-menu {
-  clip-path: polygon(0% 15%, 80% 15%, 85% 0, 100% 0, 100% 15%, 100% 100%, 0 100%);
+.-footer {
+  clip-path: polygon(0% 15%, 72.25% 15%, 85% 0%, 100% 0%, 100% 15%, 100% 100%, 5% 100%);
   margin-bottom: -1px;
+  width: 360px;
+  position: relative;
+  left: calc(100% - 360px)
+}
+
+.-footer-blue-bar {
+  background-color: #3b8aff;
+  position: absolute;
+  margin-top: 13px;
 }
 
 .-backToTop-button {
