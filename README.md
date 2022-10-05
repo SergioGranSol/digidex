@@ -1,23 +1,66 @@
-# digidex
-Visual guide for digimons and its evolutions (work in progres)
+<p align="center">
+<a href=https://github.com/SergioGranSol/digidex/blob/main/resources/img/name.png?raw=true" alt="A fanmade visual guide for digimon and its evolutions." width="300"></a><br><br>
+A fanmade visual guide for digimon and its evolutions
+</p>
 
-### Links
-This is a simple plain page to show sprites collected from many artists, triyng to keep same "chibi style"
-+ [Digidex](https://sergiogransol.github.io/digidex/)
+## 🔎 About
 
-***
+Digidex is a static page that compiles basic information about digimon like stages, attributes, types and more. This mini project is made with passion for all those people who like those creatures that once brought us joy playing its video games, card games, reading its manga or watching its anime. <a href="https://sergiogransol.github.io/digidex/">Show me page</a>
 
-## Creators
+<a href="https://sergiogransol.github.io/digidex/" target="_blank"><img src="https://github.com/SergioGranSol/digidex/blob/main/resources/img/preview.png?raw=true" alt="Digidex"></a>
 
-* **Sergio Granados** - *Initial work* - [SergioGranSol](https://github.com/SergioGranSol)
 
-## Sprite Authors
+## 🚀 Features
 
-* **Name** - *Artits* - Page
-* **Name** - *Artits* - Page
-* **Name** - *Artits* - Page
-* **Name** - *Artits* - Page
+* **Filters:** You can search for your favorite digimon using many filters.
+* **Beautiful art:** Shown digimon are made in pixel art style by many talented artists.
+* **Linked bios:** Click in every digimon you see to go to its bio.
+
+## 🤓 Creators
+
+Support this project by following the work of these people, all of them allow me to use their art for this page.
+
+**Artits**
+
+- <http://giffactory.joeyteel.com/tiny/index.html>
+- <https://www.deviantart.com/dragonrod342>
+- <https://www.deviantart.com/sergiogransol>
+- <https://www.deviantart.com/opdisk>
+- <https://www.deviantart.com/topaz66>
+- <https://www.deviantart.com/arcanin1412>
+- <https://www.deviantart.com/neroesaurus>
+- <https://www.deviantart.com/demo9ic>
+- <https://www.deviantart.com/matykiller>
+- <https://www.deviantart.com/sharkmon>
+- <https://www.deviantart.com/maxtyrannus>
+- <https://www.deviantart.com/scorcheddragonstudio>
+- <https://dibujando.net/cadejowhite/galeria>
+- <https://twitter.com/_VictoryD_>
+- <https://twitter.com/extyrannomon>
+- <https://twitter.com/thousand_13>
+
+**Data origin**
+- <https://digimon.net/reference/>
+- <https://wikimon.net>
+- <http://www.dma.wtw-x.net/>
+- <https://digimon.fandom.com/wiki/Digimon_Wiki>
+- <https://www.deviantart.com/vilmondigibits>
+
+**Pragrammer**
+
+- <https://github.com/SergioGranSol>
+
+
+## 🚫 No good??
+
+- If you consider I'm doing bad with found sprites, please let me know to remove it from this page
+
+- Dont use sprites without give credits to authors, ask for it before
+
+## 📍 Aboout digimon
+
+Digimon, Digital Monsters, and all related characters and monsters are the property of Akiyoshi Hondo and Toei Animation. Bandai too. This fanart page is intended for entertainment purposes only.
 
 ## License
 
-Code released under the [MIT License.](https://github.com/SergioGranSol/resume/blob/master/LICENSE)
+See the [LICENSE](https://github.com/tabler/tabler/blob/master/LICENSE) file.

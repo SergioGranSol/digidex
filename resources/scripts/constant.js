@@ -114,10 +114,10 @@ const versions = auxVersions.sort((previous, index) => (previous > index) ? 1 : 
 delete auxVersions;
 
 const authors = {
-  1: 'Zebub',
+  1: 'Zebub Al-Zemechiel',
   2: 'Dragonrod342',
   3: 'SergioGranSol',
-  4: 'Lucho9',
+  // 4: 'Lucho9',
   5: 'Opdisk',
   6: 'CadejoWhite',
   7: 'Topaz66',
@@ -130,7 +130,7 @@ const authors = {
   14: 'WolfryHedgies',
   15: 'Maxtyrannus',
   16: 'Digimon games',
-  17: 'Detcher',
+  // 17: 'Detcher',
   18: 'ScorchedDragonStudio',
   19: 'Pepino978',
   20: 'VictoryD',
