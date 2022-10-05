@@ -1,4 +1,6 @@
-![Digidex preview](resources/img/name.png)
+<p align="center">
+  <img src="resources/img/name.png">
+</p>
 
 A fanmade visual guide for digimon and its evolutions
 
@@ -6,7 +8,11 @@ A fanmade visual guide for digimon and its evolutions
 
 Digidex is a static page that compiles basic information about digimon like stages, attributes, types and more. This mini project is made with passion for all those people who like those creatures that once brought us joy playing its video games, card games, reading its manga or watching its anime. <a href="https://sergiogransol.github.io/digidex/">Show me page</a>
 
-![Digidex preview](resources/img/preview.png)
+<a href="https://sergiogransol.github.io/digidex/">
+  <img src="resources/img/preview.png">
+</a>
+
+<br><br>
 
 ## 🚀 Features
 
@@ -61,4 +67,4 @@ Digimon, Digital Monsters, and all related characters and monsters are the prope
 
 ## License
 
-See the [LICENSE](https://github.com/tabler/tabler/blob/master/LICENSE) file.
+See the [LICENSE](https://github.com/SergioGranSol/digidex/blob/master/LICENSE) file.
