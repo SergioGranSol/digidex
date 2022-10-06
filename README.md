@@ -1,14 +1,16 @@
 <p align="center">
-  <img src="resources/img/name.png">
+  <a href="https://github.com/SergioGranSol/digidex">
+    <img src="resources/img/name.png">
+  </a>
 </p>
 
 A fanmade visual guide for digimon and its evolutions
 
 ## 🔎 About
 
-Digidex is a static page that compiles basic information about digimon like stages, attributes, types and more. This mini project is made with passion for all those people who like those creatures that once brought us joy playing its video games, card games, reading its manga or watching its anime. <a href="https://sergiogransol.github.io/digidex/">Show me page</a>
+Digidex is a static page that compiles basic information about digimon like stages, attributes, types and more. This mini project is made with passion for all those people who like those creatures that once brought us joy playing its video games, card games, reading its manga or watching its anime. <a href="https://sergiogransol.github.io/digidex/" target="_blank">Show me page</a>
 
-<a href="https://sergiogransol.github.io/digidex/">
+<a href="https://sergiogransol.github.io/digidex/" target="_blank">
   <img src="resources/img/preview.png">
 </a>
 
@@ -18,7 +20,8 @@ Digidex is a static page that compiles basic information about digimon like stag
 
 * **Filters:** You can search for your favorite digimon using many filters.
 * **Beautiful art:** Shown digimon are made in pixel art style by many talented artists.
-* **Linked bios:** Click in every digimon you see to go to its bio.
+* **Interactive database:** Click in every digimon you see to go to their bios.
+* **Linked bios:** Click in evolutions to see their bios.
 
 ## 🤓 Creators
 
