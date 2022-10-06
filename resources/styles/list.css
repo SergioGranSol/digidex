@@ -55,14 +55,13 @@
 .-footer {
   clip-path: polygon(0% 15%, 72.25% 15%, 85% 0%, 100% 0%, 100% 15%, 100% 100%, 5% 100%);
   margin-bottom: -1px;
-  width: 360px;
+  width: 380px;
   position: relative;
-  left: calc(100% - 360px)
+  left: calc(100% - 380px)
 }
 
 .-footer-blue-bar {
   background-color: #3b8aff;
-  position: absolute;
   margin-top: 13px;
 }
 
