@@ -701,7 +701,7 @@ const MINI_DB = [
 `700|BlackWarGrowlmon|blackwargrowlmon|5|Cyborg|5||2|chaosgallantmon|01||||||true`,
 `701|WarGrowlmon X|wargrowlmon_x|5|Cyborg/X-Antibody|5|X-Antibody|2|gallantmon_x,megidramon_x|01||||||true`,
 `702|WereGarurumon|weregarurumon|5|Beastkin|5||1|weregarurumon_sagittarius_mode,metalgarurumon,ancientgarurumon,cresgarurumon,zeedgarurumon|01|03|||||true`,
-`703|WereGarurumon|weregarurumon_sagittarius_mode|5|Beastkin|5||1|metalgarurumon,ancientgarurumon,cresgarurumon,zeedgarurumon|01||||||true`,
+`703|WereGarurumon Sagittarius Mode|weregarurumon_sagittarius_mode|5|Beastkin|5||1|metalgarurumon,ancientgarurumon,cresgarurumon,zeedgarurumon|01||||||true`,
 `704|WereGarurumon|weregarurumon_black|5|Beastkin|5||2|metalgarurumon_black,bancholeomon,zeedgarurumon,cresgarurumon|01||||||true`,
 `705|Whamon|whamon_ultimate|5|Sea Animal|5||1|neptunemon,marineangemon,kingwhamon|01|02|||||true`,
 `706|Wingdramon|wingdramon|5|Dragon|5||1|slayerdramon|20||03||||true`,
