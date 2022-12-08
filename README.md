@@ -30,39 +30,25 @@ Digidex is a static page that compiles basic information about digimon like stag
 Support this project by following the work of these people, all of them allow me to use their art for this page.
 
 **Artits**
-
-<table border="0">
-  <tr>
-    <td><ul>
-      <li><a target="_blank" href="http://giffactory.joeyteel.com/tiny/index.html">Zebub Al-Zemechiel (Giffactory)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/dragonrod342">DragonRod342 (DeviantArt)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/sergiogransol">SergioGranSol (DeviantArt)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/opdisk">Opdisk (DeviantArt)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/topaz66">Topaz66 (DeviantArt)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/arcanin1412">Arcanin1412 (DeviantArt)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/neroesaurus">Neroesaurus (DeviantArt)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/demo9ic">Demo9ic (DeviantArt)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/matykiller">Matykiller (DeviantArt)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/maxtyrannus">Maxtyrannus (DeviantArt)</a></li>
-      <li><a target="_blank" href="https://www.deviantart.com/scorcheddragonstudio">ScorchedDragonStudio (DeviantArt)</a></li>
-    </ul></td>
-    <td><ul>
-      <li><a target="_blank" href="https://www.deviantart.com/sharkmon">Sharkmon (DeviantArt)</a></li>
-      <ul>
-      <li><a target="_blank" href="https://blog.naver.com/tmfrl3316/221446085141">Sharkmon's collection no.1 (N blog)</a></li>
-      <li><a target="_blank" href="https://blog.naver.com/tmfrl3316/221446094108">Sharkmon's collection no.2 (N blog)</a></li>
-      <li><a target="_blank" href="https://blog.naver.com/tmfrl3316/221446113104">Sharkmon's collection no.3 (N blog)</a></li>
-      <li><a target="_blank" href="https://blog.naver.com/tmfrl3316/221446126612">Sharkmon's collection no.4 (N blog)</a></li>
-      <li><a target="_blank" href="https://blog.naver.com/tmfrl3316/221459293076">Sharkmon's collection no.5 (N blog)</a></li>
-      <li><a target="_blank" href="https://blog.naver.com/tmfrl3316/221459314419">Sharkmon's collection no.6 (N blog)</a></li>
-      </ul>
-      <li><a target="_blank" href="https://dibujando.net/cadejowhite/galeria">CadejoWhite (Dibujando.net) </a></li>
-      <li><a target="_blank" href="https://twitter.com/_VictoryD_">VictoryD (Twitter)</a></li>
-      <li><a target="_blank" href="https://twitter.com/extyrannomon">Extyrannomon (Twitter)</a></li>
-      <li><a target="_blank" href="https://twitter.com/thousand_13">Thousand_13 (Twitter)</a></li>
-    </ul></td>
-  </tr>
-</table>
+<ul>
+  <li><a target="_blank" href="http://giffactory.joeyteel.com/tiny/index.html">Zebub Al-Zemechiel (Giffactory)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/dragonrod342">DragonRod342 (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/sergiogransol">SergioGranSol (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/opdisk">Opdisk (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/topaz66">Topaz66 (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/arcanin1412">Arcanin1412 (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/neroesaurus">Neroesaurus (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/demo9ic">Demo9ic (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/matykiller">Matykiller (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/maxtyrannus">Maxtyrannus (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/scorcheddragonstudio">ScorchedDragonStudio (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://www.deviantart.com/sharkmon">Sharkmon (DeviantArt)</a></li>
+  <li><a target="_blank" href="https://blog.naver.com/tmfrl3316">Yggdrasil Library - Sprite collection (Naver Blog)</a></li>
+  <li><a target="_blank" href="https://dibujando.net/cadejowhite/galeria">CadejoWhite (Dibujando.net) </a></li>
+  <li><a target="_blank" href="https://twitter.com/_VictoryD_">VictoryD (Twitter)</a></li>
+  <li><a target="_blank" href="https://twitter.com/extyrannomon">Extyrannomon (Twitter)</a></li>
+  <li><a target="_blank" href="https://twitter.com/thousand_13">Thousand_13 (Twitter)</a></li>
+</ul>
 
 **Data origin**
 
@@ -85,7 +71,7 @@ Support this project by following the work of these people, all of them allow me
 
 <hr>
 
-## Aboout digimon
+## About digimon
 
 Digimon, Digital Monsters, and all related characters and monsters are the property of Akiyoshi Hondo and Toei Animation. Bandai too. This fanart page is intended for entertainment purposes only.
 
