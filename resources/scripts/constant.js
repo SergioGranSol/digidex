@@ -62,7 +62,8 @@ const attributes = {
   3: "Data",
   4: "Free",
   5: "Unknown",
-  6: "Variable"
+  6: "Variable",
+  7: "None"
 }
 
 const attributesIcons = {
