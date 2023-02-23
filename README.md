@@ -4,6 +4,8 @@
   </a>
 </p>
 
+## Digidex
+
 A fanmade visual guide for digimon and its evolutions
 
 ## About
@@ -58,16 +60,19 @@ Support this project by following the work of these people, all of them allow me
 - <a target="_blank" href="https://digimon.fandom.com/wiki/Digimon_Wiki">Digimon Wiki</a>
 - <a target="_blank" href="https://www.deviantart.com/vilmondigibits">VilmonDigibits (DeviantArt)</a>
 
-**Pragrammer**
+**Programmer**
 
 - <a target="_blank" href="https://github.com/SergioGranSol">SergioGranSol (GitHub)</a>
 
 <hr>
 
-## No good??
+## Important
 
-- If you consider I'm doing bad with found sprites, please let me know to remove them from this page.
-- Dont use sprites without give credits to authors, ask for it before.
+- Please let me know if you I'm doing bad with found sprites to remove them from this page.
+- Don't steal or monetise
+- Don't use sprites without give credits to authors, ask for it before.
+- When used these sprites alway put the links to the content and creators of the images (That's why I let the list of link in this post)
+- No commissions or petitions to add or create certain digimon, I'll update this page in the order I preferer
 
 <hr>
 
