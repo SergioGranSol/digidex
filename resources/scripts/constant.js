@@ -134,11 +134,13 @@ const authors = {
   16: 'Digimon games',
   // 17: 'Detcher',
   18: 'ScorchedDragonStudio',
-  19: 'Pepino978',
+  19: 'Pepino78',
   20: 'VictoryD',
   21: 'Extyrannomon',
   22: 'Digital Mosters Almanac',
-  23: 'Thousand13'
+  23: 'Thousand13',
+  24: 'Paburo',
+  25: 'Fenrimon'
 }
 
 const spriteDescription = {
